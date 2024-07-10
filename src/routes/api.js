@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
+const mailController = require('../controllers/mailController');
+
 router.get('/', (req, res) => {
     res.send('Hello, world!');
 });
 
-router.get('/teste', (req, res) => {
-    res.status(200).json('Parabéns pela requisição!');
-});
+router.post('/sendmail', mailController.sendMail);
 
 module.exports = router;

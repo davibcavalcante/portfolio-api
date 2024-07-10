@@ -12,5 +12,5 @@ const routes = require('./src/routes/api')
 app.use(('/', routes));
 
 app.listen(5000, () => {
-    console.log('Servidor escutando na porta 5000')
+    console.log('Servidor escutanto em http://localhost:5000')
 })
