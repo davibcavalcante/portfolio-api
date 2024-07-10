@@ -1,0 +1,16 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(cors());
+
+const routes = require('./src/routes/api')
+
+app.use(('/', routes));
+
+app.listen(5000, () => {
+    console.log('Servidor escutando na porta 5000')
+})
